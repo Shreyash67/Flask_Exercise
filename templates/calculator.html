@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 100px;
+      color: #333;
+    }
+    
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    
+    a {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    
+    a:hover {
+      background-color: #0056b3;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Calculator</h1>
+    <form method="post" action="{{url_for("calculator")}}">
+        <input type="text" name="Number1" placeholder="Number1" required="required" />
+        <select class="form-select" name="operation" aria-label="Default select example">
+          <option selected>Select the Operation</option>
+          <option value="addition">Addition</option>
+          <option value="subtraction">Subtraction</option>
+          <option value="multiplication">Multiplication</option>
+          <option value="division">Division</option>
+        </select>
+        <input type="text" name="Number2" placeholder="Number2" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate Button</button>
+      </form>
+  </div>
+</body>
+</html>
